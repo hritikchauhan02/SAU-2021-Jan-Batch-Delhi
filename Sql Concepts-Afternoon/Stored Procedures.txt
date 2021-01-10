@@ -1,0 +1,29 @@
+marks_update :-
+
+CREATE DEFINER=`Hritik Chauhan`@`localhost` PROCEDURE `marks_update`()
+BEGIN
+	update StudentSubjectInformation
+    set marks_percentage = (marks_obtained / total_marks) * 100;
+END
+
+
+update_student_scholarship :-
+
+CREATE DEFINER=`Hritik Chauhan`@`localhost` PROCEDURE `update_student_scholarship`()
+BEGIN
+	update StudentScholarshipInformation
+    set scholarship_category = 'Academic' where StudentScholarshipInformation.student_roll_number
+    in (select student_roll_number from StudentSubjectInformation where marks_percentage > 90);
+END
+
+
+return_balance_amount :-
+
+CREATE DEFINER=`Hritik Chauhan`@`localhost` PROCEDURE `return_balance_amount`(
+in rollNumber int,
+out amount int
+)
+BEGIN
+	select amount_balance into amount from StudentAdmissionPaymentDetails
+    where student_roll_number = rollNumber;
+END
