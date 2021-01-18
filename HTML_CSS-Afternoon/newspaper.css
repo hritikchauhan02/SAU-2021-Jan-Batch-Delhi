@@ -1,0 +1,136 @@
+body {
+  font-size: 16px;
+}
+header {
+  font-family: "Libre Baskerville", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 80px;
+  display: inline-block;
+  line-height: 72px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: auto;
+}
+.head {
+  text-align: center;
+}
+.subheader {
+  text-transform: uppercase;
+  border-bottom: 2px solid #2f2f2f;
+  border-top: 2px solid #2f2f2f;
+  padding: 12px 0 12px 0;
+  font-weight: 400;
+}
+
+.div1 {
+  margin-top: 20px;
+  height: auto;
+  display: block;
+  border-right: 2px solid #2f2f2f;
+}
+.div2 {
+  margin-top: 20px;
+  border-right: 2px solid #2f2f2f;
+}
+
+.div3 {
+  margin-top: 20px;
+  padding-left: 5%;
+}
+
+.div4 {
+  height: auto;
+  padding-left: 5%;
+}
+.div5 {
+  border-right: 2px solid #2f2f2f;
+}
+
+.div6 {
+  border-right: 2px solid #2f2f2f;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Libre Baskerville", serif;
+}
+
+.citation {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media only all and (max-width: 766px) {
+  .div1 {
+    margin-top: 20px;
+    border-right: none;
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 20px;
+  }
+  .div2 {
+    border-right: none;
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .div3 {
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #2f2f2f;
+    padding-left: 2%;
+  }
+
+  .div4 {
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 20px;
+    padding-left: 2%;
+    margin-top: 20px;
+  }
+  .div5 {
+    border-right: none;
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .div6 {
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 20px;
+    border-right: none;
+    margin-top: 20px;
+  }
+
+  .div7 {
+    margin-top: 20px;
+  }
+}
+
+@media only all and (max-width: 650px) {
+  header {
+    max-width: auto;
+    font-size: 50px;
+    line-height: 54px;
+    overflow: hidden;
+  }
+}
+
+@media only all and (max-width: 520px) {
+  header {
+    max-width: auto;
+    font-size: 40px;
+    line-height: 54px;
+    overflow: hidden;
+  }
+}
