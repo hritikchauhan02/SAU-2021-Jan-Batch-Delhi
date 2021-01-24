@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import Home from './Home';
+import Home from './Components/Home';
 
 import {NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
-import MovieDetails from './MovieDetails';
-import Splash from './Splash';
+import MovieDetails from './Components/MovieDetails';
+import Splash from './Components/Splash';
 
 const Stack = createStackNavigator();
 
