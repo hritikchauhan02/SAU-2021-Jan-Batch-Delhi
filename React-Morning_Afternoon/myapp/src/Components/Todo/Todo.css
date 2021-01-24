@@ -1,0 +1,36 @@
+/* .container {
+  text-align: center;
+} */
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 5%;
+}
+
+h1 {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.row1 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.trash {
+  float: right;
+  color: red;
+  border: none;
+  transform: scale(1.5);
+}
+
+.copy {
+  float: right;
+  margin-right: 2%;
+  border: none;
+  transform: scale(1.5);
+}
+
+.line {
+  text-decoration: line-through;
+}
