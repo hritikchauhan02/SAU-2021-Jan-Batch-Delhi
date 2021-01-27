@@ -1,0 +1,51 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from EmployeeImplService WSDL service -->
+
+  <service name="EmployeeImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://employee.com"/>
+      <parameter name="wsdlServiceElement" value="EmployeeImplService"/>
+      <parameter name="schemaQualified" value="http://employee.com"/>
+      <parameter name="wsdlServicePort" value="EmployeeImpl"/>
+      <parameter name="className" value="com.employee.EmployeeImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="EmployeeImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getName" qname="operNS:getName" xmlns:operNS="http://employee.com" returnQName="retNS:getNameReturn" xmlns:retNS="http://employee.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setName" qname="operNS:setName" xmlns:operNS="http://employee.com" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://employee.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getId" qname="operNS:getId" xmlns:operNS="http://employee.com" returnQName="retNS:getIdReturn" xmlns:retNS="http://employee.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getAddress" qname="operNS:getAddress" xmlns:operNS="http://employee.com" returnQName="retNS:getAddressReturn" xmlns:retNS="http://employee.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setId" qname="operNS:setId" xmlns:operNS="http://employee.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://employee.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAge" qname="operNS:getAge" xmlns:operNS="http://employee.com" returnQName="retNS:getAgeReturn" xmlns:retNS="http://employee.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getEmail" qname="operNS:getEmail" xmlns:operNS="http://employee.com" returnQName="retNS:getEmailReturn" xmlns:retNS="http://employee.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setAddress" qname="operNS:setAddress" xmlns:operNS="http://employee.com" soapAction="" >
+        <parameter qname="pns:address" xmlns:pns="http://employee.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setEmail" qname="operNS:setEmail" xmlns:operNS="http://employee.com" soapAction="" >
+        <parameter qname="pns:email" xmlns:pns="http://employee.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setAge" qname="operNS:setAge" xmlns:operNS="http://employee.com" soapAction="" >
+        <parameter qname="pns:age" xmlns:pns="http://employee.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="setName getAge getName setAddress setEmail setId getEmail getId getAddress setAge"/>
+
+  </service>
+</deployment>
